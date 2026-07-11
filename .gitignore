@@ -1,0 +1,37 @@
+# ============================================================
+# 機密情報の退避先ルール
+# ------------------------------------------------------------
+# 公開してはいけない情報（社内固有情報・認証情報・個人情報など）は
+# 必ずこの .gitignore に登録してから扱うこと。
+# うっかりコミットを防ぐため、迷ったら「無視する」側に倒す。
+# ============================================================
+
+# --- 認証情報・シークレット類（絶対に公開しない） ---
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.keystore
+*.jks
+secrets/
+credentials*.json
+application-secret*.properties
+application-secret*.yml
+application-local*.properties
+application-local*.yml
+
+# --- Claude Code のローカル設定（個人環境依存・共有不要） ---
+.claude/
+
+# --- IDE / エディタ設定 ---
+.idea/
+.vscode/
+*.iml
+
+# --- ビルド成果物・OS が生成するファイル ---
+target/
+build/
+*.class
+Thumbs.db
+.DS_Store
