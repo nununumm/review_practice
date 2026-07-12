@@ -1,0 +1,22 @@
+name: Enforce PR Branch Rules
+
+# いつこのロボットを動かすか？の設定
+on:
+  pull_request:
+    branches:
+      - master  # master宛てのPRが作られた時だけ動かす
+
+jobs:
+  check-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if source branch is develop
+        run: |
+          # github.head_ref には「どこから来たPRか（送信元ブランチ名）」が入っています
+          if [ "${{ github.head_ref }}" != "develop" ]; then
+            echo "🚨 エラー: masterブランチへのPRは、developブランチからのみ許可されています。"
+            echo "現在の送信元ブランチ: ${{ github.head_ref }}"
+            exit 1 # 「1」を返すと、ロボットが「チェック失敗（赤色）」として処理します
+          else
+            echo "✅ 送信元ブランチのチェックOK: developからのPRです。"
+          fi
