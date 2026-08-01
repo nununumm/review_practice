@@ -74,6 +74,25 @@
 - Spring の **Repository は DAO の一種**。役割は「データの出入り口係」。
 - セットで捉える：**Entity（表の1行の入れ物）＋ Repository/DAO（出し入れする係）**。
 
+### B-7. `@Query` と `:名前` プレースホルダ／`@Param`（値の差し込み）
+- `@Query("...")` ＝ リポジトリのメソッドに**自分で書いたSQL（正確にはJPQL）**を紐づけるアノテーション。命名規則（`findByXxx`）では書けない集計（SUM/COUNT）やJOINを書きたいときに使う。
+- SQL文の中の **`:名前`（コロン付き）＝「あとで値を差し込む空欄（プレースホルダ）」の目印**。まだ具体値は入っていない。
+- メソッド引数の **`@Param("名前")` ＝「この引数を、SQL中の `:名前` の空欄に入れてね」という宛名ラベル**。
+  ```java
+  @Query("... WHERE o.orderDate = :date")
+  DailySalesSummary summarize(@Param("date") LocalDate date);
+  //                          ↑ この引数が :date の空欄に入る
+  ```
+- **対応づけは「名前」であって「順番」ではない。** `:名前` と `@Param("名前")` の**名前が一致**していれば結びつく。だから引数の並び順は自由で、取り違えが起きにくい。
+- **引数が複数でも同じ**。空欄と `@Param` を数だけ用意して、名前で対応させるだけ：
+  ```java
+  @Query("... WHERE o.orderDate = :date AND o.amount >= :minAmount")
+  DailySalesSummary summarize(@Param("date") LocalDate date,
+                              @Param("minAmount") long minAmount);
+  ```
+- **よくあるミス**：`:minAmount` なのに `@Param("minamount")` のような**大文字小文字・綴り違い**。名前が一致せず**起動時にエラー**になる（`:名前` と `@Param("名前")` は完全一致が条件）。
+- **なぜ文字列連結でSQLを作らないのか**：`"... = '" + date + "'"` のような手組みは、悪意ある入力でSQLを乗っ取られる **SQLインジェクション**の穴になる。`:名前`＋`@Param` の差し込み（**バインド変数**）は、渡された値を「**ただのデータ**」として安全にはめ込むので、この攻撃を原理的に防げる。→ セキュリティ観点（第1・7問）にも直結。
+
 ---
 
 ## 🔗 いちばん大事な“つながり”
