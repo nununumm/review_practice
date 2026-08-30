@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import lombok.RequiredArgsConstructor;
 
 @Service
+//コンストラクタを省略するアノテーション
 @RequiredArgsConstructor
 public class MemberRegistrationService {
 
@@ -37,7 +38,7 @@ public class MemberRegistrationService {
 
         return member.getId();
     }
-
+    
     @Transactional
     public void grantSignUpCoupon(Long memberId) {
         Coupon coupon = new Coupon();
