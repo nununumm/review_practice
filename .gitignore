@@ -22,9 +22,10 @@ application-local*.properties
 application-local*.yml
 
 # --- Claude Code のローカル設定（個人環境依存・共有不要） ---
-# .claude/ 配下は基本的に個人設定なので除外。ただし共有したいスキルだけ例外的に追跡する。
+# .claude/ 配下は基本的に個人設定なので除外。ただし共有したいスキル・エージェントだけ例外的に追跡する。
 .claude/*
 !.claude/skills/
+!.claude/agents/
 
 # --- IDE / エディタ設定 ---
 .idea/
