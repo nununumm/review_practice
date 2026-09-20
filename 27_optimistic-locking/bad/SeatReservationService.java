@@ -28,6 +28,7 @@ public class SeatReservationService {
 
             // 2. 空席を「予約済み」に更新する
             target.setStatus("RESERVED");
+            
             target.setReservedUserId(userId);
             seatRepository.save(target);
 
