@@ -1,0 +1,3 @@
+index_theme=JSON変換ユーティリティ（ObjectMapper毎回new）
+perspective=パフォーマンス・設計
+ng=呼び出しのたびにnew ObjectMapper()し高頻度呼び出しで無駄なCPU・GC負荷（核心。ObjectMapperはスレッドセーフで使い回し前提）/ 各所でnewするため日付書式や未知プロパティ無視などの設定がバラバラで一貫性なし / 例外を握りつぶしnull返し（fromJsonはログすら出さず）で失敗が伝わらず呼び出し側でNPE / staticユーティリティ的でDI・テスト差し替え不能

@@ -1,0 +1,3 @@
+index_theme=割り勘・税込計算（BigDecimal.divideの丸め欠如）
+perspective=金銭計算の型・正確性
+ng=divideに桁数・RoundingModeを指定せず割り切れない入力（1000÷3等）でArithmeticException(Non-terminating decimal expansion)（核心・割り勘は割り切れないのが普通）/ new BigDecimal(double)/new BigDecimal(0.1)で生成時点に誤差が入りBigDecimalを使う意味が消える（文字列・valueOfで作るべき）/ 人数0・負数のガードなしでゼロ除算・負按分 / 税率0.1のマジックナンバー / 端数を誰が負担するか（切上/切捨/四捨五入）の方針が不明で合計が総額と不一致

@@ -1,0 +1,3 @@
+index_theme=設定ファイル読込のfinally return（例外・結果の握りつぶし）
+perspective=例外処理
+ng=finally内のreturn ""で本体の戻り値も例外も握りつぶし常に空文字を返す（核心）/ try-with-resources不使用で手動closeが入れ子のfinally地獄に / catch(Exception)が広すぎ+printStackTrace+return nullで原因喪失 / 戻り値がnull/""/実値の3種で呼び出し側が状態を判別不能 / ファイルパスのハードコードとFileReaderの文字コード未指定

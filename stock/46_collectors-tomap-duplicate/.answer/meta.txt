@@ -1,0 +1,3 @@
+index_theme=商品コード索引化（Collectors.toMapの重複キー）
+perspective=コレクション・堅牢性
+ng=toMapに重複キーのマージ関数を指定せず重複コードでIllegalStateException（核心・本番データで初めて発覚）/ 索引作成時はgetCodeそのまま・検索時はtoUpperCaseでキーが食い違い「登録したのに見つからない」/ 検索のたびに全件をMap化し1件引くのに毎回O(n)構築（索引の意味なし）/ toUpperCaseがLocale未指定でロケール依存＋codeのnull非考慮でNPE
