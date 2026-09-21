@@ -1,0 +1,3 @@
+index_theme=夜間バッチのログ出力（ロギング設計）
+perspective=ログ設計
+ng=ログレベル誤用（本番で大量INFO/DEBUG、重要エラーがdebug）/ 同一例外をcatchのたびに二重・多重ログ / log.debug("..."+重い文字列生成)をisDebugEnabledガードなしで実行（性能）/ System.out.println併用 / 例外をlogだけして飲み込む / 文字列連結でなくプレースホルダを使うべき

@@ -1,0 +1,3 @@
+index_theme=注文明細の集計処理（Stream/コレクション）
+perspective=設計・可読性
+ng=forEach内で外部リストへadd（副作用でStreamを使う）/ ネストループでO(n²) / 結果0件でnull返却（空リストでなく）/ Optional.get()多用 / stream中で状態を持つ変数を書き換え
