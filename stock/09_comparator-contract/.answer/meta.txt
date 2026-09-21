@@ -1,0 +1,3 @@
+index_theme=商品ランキングの並べ替え（Comparator契約）
+perspective=型安全性・設計
+ng=compareでa-bの整数減算（オーバーフローで符号反転→順序破綻）/ 比較が非対称・推移律違反で"Comparison method violates its general contract"例外 / nullを考慮せずNPE / equalsと整合しないcompare / 可変フィールドでソート後に順序が壊れる

@@ -1,0 +1,3 @@
+index_theme=商品・注文API群のエラー処理（@ControllerAdvice不在）
+perspective=例外処理・API設計
+ng=各Controllerでtry-catchをコピペ（横断的関心事が散在）/ 例外のスタックトレース文字列をレスポンスへ露出（情報漏洩）/ HTTPステータスが常に200や不統一 / 独自例外を握りつぶし汎用messageに潰す / @ControllerAdvice/@ExceptionHandlerによる集約なし

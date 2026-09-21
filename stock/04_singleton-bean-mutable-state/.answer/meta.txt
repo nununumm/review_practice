@@ -1,0 +1,3 @@
+index_theme=帳票生成サービス（シングルトンBeanの可変状態）
+perspective=並行処理・DI
+ng=@Serviceのインスタンスフィールドに処理中のユーザー・カウンタ・SimpleDateFormat・StringBuilderを保持し複数リクエストで共有（シングルトンBeanは1インスタンス共有＝スレッド非安全）/ 状態をフィールドに持つ設計自体が誤り（ローカル変数/引数にすべき）

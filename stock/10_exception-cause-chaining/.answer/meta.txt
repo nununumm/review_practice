@@ -1,0 +1,3 @@
+index_theme=外部連携処理の例外設計
+perspective=例外処理
+ng=catch(Exception e){throw new RuntimeException("失敗");}で原因(e)を渡さずスタックトレース喪失 / 例外を握りつぶしデフォルト値を返す / チェック例外を無意味にthrows Exceptionで伝播/全握り / 独自例外の階層設計なし・区別できない / ログと再スローの二重処理

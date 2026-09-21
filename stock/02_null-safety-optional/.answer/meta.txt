@@ -1,0 +1,3 @@
+index_theme=会員情報照会サービス（null安全・Optional）
+perspective=API設計・堅牢性
+ng=nullを返すAPI設計（呼び出し側でNPE）/ 文字列比較が引数.equals(定数)で逆（NPE誘発、定数.equalsにすべき）/ Boolean/Integerのautoboxで==比較・nullアンボックスNPE / Optionalをフィールド・引数に使う誤用 / Optional.get()で存在チェックなし
