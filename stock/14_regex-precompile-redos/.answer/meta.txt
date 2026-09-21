@@ -1,0 +1,3 @@
+index_theme=問い合わせフォームの入力検証（正規表現）
+perspective=パフォーマンス・セキュリティ
+ng=ループ内で毎回Pattern.compile / String.matches多用（都度コンパイル） / ReDoSを起こす危険パターン（(.+)+） / 入力長の上限チェック無し / 例外を握りつぶしてtrue返却

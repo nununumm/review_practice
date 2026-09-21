@@ -1,0 +1,3 @@
+index_theme=素のJDBCによるユーザー検索・更新（リソース管理）
+perspective=例外処理・リソース管理
+ng=try-with-resources不使用でclose漏れ（リソースリーク） / finallyのcloseが元例外を握りつぶす / catchでprintStackTrace+return null（例外握りつぶし） / DriverManagerで都度接続（DataSource/DI不使用） / SELECT *と列番号マジックインデックス
