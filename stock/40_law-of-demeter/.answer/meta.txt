@@ -1,0 +1,3 @@
+index_theme=配送ラベルの組み立て（デメテルの法則違反 getA().getB().getC()）
+perspective=設計・堅牢性
+ng=order.getCustomer().getAddress().getZipCode()の数珠つなぎでデメテルの法則(最小知識の原則)違反=遠くのオブジェクト内部を掘る / Order→Customer→Addressの内部構造を呼び出し側が丸ごと知り強く結合し構造変更で芋づる式に壊れる / 連鎖途中のnullでNPEの地雷(どのドットで落ちたか不明) / 入れ子モックが必要でテストしづらい

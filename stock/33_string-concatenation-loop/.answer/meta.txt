@@ -1,0 +1,3 @@
+index_theme=売上CSVの文字列組み立て（ループ内String連結→StringBuilder）
+perspective=パフォーマンス・可読性
+ng=ループ内の += でStringを毎回作り直しO(n^2)で数万件が激遅 / 大量の中間文字列生成でGC圧迫 / 区切り・ヘッダの手組みで可読性が低くカンマ入り値のエスケープも無い
