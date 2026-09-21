@@ -1,0 +1,3 @@
+index_theme=会員プロフィールの部分更新（未指定項目のnull上書き）
+perspective=API設計
+ng=部分更新(PATCH)なのに送られてこなかった項目までnullで無条件上書きし既存データを消失（核心）/ findById().get()で存在チェックなしでNoSuchElementException / Entityを直接返しDTO不在で情報漏洩の恐れ / メール形式など入力バリデーションなし / 更新系なのに@Transactionalが無く整合性が保てない

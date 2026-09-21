@@ -1,0 +1,3 @@
+index_theme=会員表示名の組み立て（Optionalアンチパターン）
+perspective=API設計・可読性
+ng=isPresent()+get()の多用でOptionalの意味がなく昔ながらのnullチェックと同じ冗長さ＋get()二度呼び（核心）/ greeting()がメソッド引数にOptionalを取るアンチパターン（nullかもしれないOptionalで規約が曖昧）/ greeting()内でget()を存在チェックなしで呼び空ならNoSuchElementException / displayName()の二重ネストと"ゲスト"リテラルの重複（map(...).orElse(定数)で一掃可能）

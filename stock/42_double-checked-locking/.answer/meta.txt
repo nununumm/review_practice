@@ -1,0 +1,3 @@
+index_theme=為替レート表の遅延初期化（壊れたDouble-Checked Locking）
+perspective=並行処理
+ng=instanceにvolatileが無くダブルチェックロッキングが壊れ、命令並べ替えで中身未完成のオブジェクトを他スレッドが掴む（核心）/ 手書きDCL自体が難しく避けるべき（初期化オンデマンドホルダーが安全）/ rateTableがfinalでなく可変で部分構築オブジェクトの漏洩を助長 / getRateTableが内部の可変レート表参照を直返し（防御的コピー欠如）
