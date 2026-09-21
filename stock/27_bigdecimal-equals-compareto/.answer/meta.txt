@@ -1,0 +1,3 @@
+index_theme=BigDecimalの正しい使い方（生成・一致判定・除算）
+perspective=正確性（金額計算・数値の罠）
+ng=new BigDecimal(double)で生成し誤差混入（文字列/valueOf不使用） / 金額一致をequalsで判定しスケール違いで誤判定（compareTo不使用） / divideにscale・RoundingMode未指定で割り切れないとArithmeticException / null・負数・0除算の境界チェック無し

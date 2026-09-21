@@ -1,0 +1,3 @@
+index_theme=検索条件パラメータの解釈（例外を制御フローに使わない）
+perspective=例外処理（アンチパターン）・パフォーマンス
+ng=数字判定にtry-catch(parseInt/NumberFormatException)を流用し例外を正常系分岐に使用 / 一覧の終端検出・存在判定を範囲外例外(IndexOutOfBounds)でループ打ち切り / 例外を握りつぶして黙ってデフォルト値にすり替え原因が消える / catch(Exception)で広く捕まえ本物のバグ(NPE等)まで飲み込む / 上限0・見つからずnullなど戻り値/既定値が多義で曖昧

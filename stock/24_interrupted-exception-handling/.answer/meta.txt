@@ -1,0 +1,3 @@
+index_theme=外部在庫システムへのリトライ同期バッチ（InterruptedExceptionと割り込み）
+perspective=例外処理（割り込み・リトライ設計）
+ng=InterruptedExceptionを空catchで握りつぶし割り込みフラグ未復元（バッチがゾンビ化） / while(true)でリトライ上限なし無限ループ / catch(Exception)で全例外を握りつぶしリトライ（想定外のバグも黙殺） / sleep(5000)のマジックナンバーと指数バックオフ不在 / printStackTraceをログ代わりに使いロガー未使用
