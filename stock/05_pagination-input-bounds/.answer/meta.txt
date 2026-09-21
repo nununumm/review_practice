@@ -1,0 +1,3 @@
+index_theme=商品一覧API（ページング・入力境界）
+perspective=パフォーマンス・堅牢性
+ng=page/sizeを無検証（size=100000でOOM、負数でエラー）/ OFFSETページングで深いページが低速＋総件数count(*)を毎回全件 / page*sizeのint計算オーバーフロー / findAll後にアプリ側subListで擬似ページング（全件ロード）/ 上限・デフォルト・最大size未設定

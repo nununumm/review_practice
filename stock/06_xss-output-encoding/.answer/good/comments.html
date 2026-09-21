@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- Thymeleaf（＝Spring定番のHTMLテンプレートエンジン）で書いたコメント一覧。
+     xmlns:th を宣言すると th:* 属性が使える。 -->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>コメント一覧</title>
+</head>
+<body>
+<div class="comments">
+    <!-- th:each … リストを1件ずつ繰り返す（Javaのforに相当）。
+         c にコメント1件が入る。 -->
+    <div class="comment" th:each="c : ${comments}"
+         th:attr="title=${c.author}">
+        <!-- ↑ th:attr で title属性にセット。属性値も自動的に属性用エスケープが効くので、
+               " や < を仕込まれても属性を抜け出せない。
+               （bad版のように 'title=' + 入力 と手で連結するのが最も危険）。 -->
+
+        <!-- th:text … タグの中身にテキストとして差し込む。
+             ここが肝：HTMLの特殊文字（< > & " '）を自動でエスケープするので、
+             <script>alert(1)</script> と投稿されても、画面には
+             ただの文字列として表示され、スクリプトは実行されない。 -->
+        <span class="author" th:text="${c.author}">投稿者名</span>
+        <p class="body" th:text="${c.body}">本文</p>
+
+        <!-- ※もしHTMLとして解釈させたい場合だけ th:utext を使うが、
+               ユーザー入力には絶対に使わない（エスケープが無効になり穴になる）。 -->
+    </div>
+</div>
+</body>
+</html>
