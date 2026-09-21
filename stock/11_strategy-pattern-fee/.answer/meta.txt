@@ -1,0 +1,3 @@
+index_theme=決済手数料の計算（Strategyパターン/enum）
+perspective=設計（拡張性・OCP）
+ng=String手段を巨大if-elseで分岐（OCP違反/Strategy不在） / 料率・上限・最低のマジックナンバー直書き / doubleで金銭計算し丸め誤差（BigDecimal不在） / else・default無しで未知手段が手数料0のまま素通り / 上限キャップ・最低手数料ロジックの重複コピペ / 手段名を==で比較し表記ゆれに弱い
