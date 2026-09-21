@@ -1,0 +1,3 @@
+index_theme=注文一覧APIの明細取得（LAZY/トランザクション境界）
+perspective=パフォーマンス（トランザクション境界・N+1）
+ng=@Transactional無しでLAZY明細をトランザクション外参照しLazyInitializationException / ループ内getLines()でN+1問題 / findAll全件取得でページングなし / Order(LAZYプロキシ)を直接レスポンス返却でシリアライズ例外・情報漏洩 / 集計ロジックをコントローラが保持

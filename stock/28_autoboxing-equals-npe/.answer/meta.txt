@@ -1,0 +1,3 @@
+index_theme=ラッパー型の罠（オートボクシング/Integerキャッシュ/==とequals）
+perspective=正確性（型・null安全）
+ng=Integerどうしを==で比較しIntegerキャッシュ外(128以上)で誤判定 / null返却しうるLongをintに受けてアンボクシングでNPE / Booleanをif(flag)でそのまま使いnullでNPE / しきい値マジックナンバー・フィールドインジェクション
