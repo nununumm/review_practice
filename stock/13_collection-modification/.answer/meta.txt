@@ -1,0 +1,3 @@
+index_theme=買い物カゴの整理処理（コレクション操作・共有状態）
+perspective=設計・バグ（スレッド安全性/反復中の削除）
+ng=拡張for中にremoveでConcurrentModificationException / indexed forの削除で要素スキップ（消し残し） / @Serviceのフィールドで可変Listを共有（ArrayListは非スレッドセーフ） / getterでListをそのまま返す（防御的コピー無し） / nullをaddして後段でNullPointerException
