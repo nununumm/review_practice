@@ -1,0 +1,3 @@
+index_theme=会員リストと申込リストの突合（List.contains vs HashSet／計算量）
+perspective=パフォーマンス（計算量・データ構造の選択）
+ng=既存IDをListで持ちループ内contains（O(n×m)の二重ループ） / 重複除去もListを毎回なめる（隠れた二重ループ） / if(x==true)等の冗長コードとbreak漏れの全走査 / 引数のnullチェック漏れでNPE / 文字列キー時の突合キー正規化（trim・大文字小文字）未考慮

@@ -1,0 +1,3 @@
+index_theme=信頼できない入力のデシリアライズ（Javaネイティブシリアライズ/RCE）
+perspective=セキュリティ（安全でないデシリアライズ）
+ng=外部由来バイト列をObjectInputStream.readObjectで無検証デシリアライズ（RCEの温床） / readObjectの戻り値を無検査で(Cart)キャスト / ストリームをtry-with-resourcesで閉じずリーク / catch(Exception)で握りつぶしてnull返却し原因喪失
