@@ -1,0 +1,3 @@
+index_theme=ポイント交換処理のトランザクション（@Transactionalがチェック例外でロールバックしない）
+perspective=トランザクション・例外処理
+ng=@Transactional付きでもデフォルトはRuntimeException/Errorのみロールバックしチェック例外では自動ロールバックしない→ポイント減算だけコミットされ部分コミット / 「@Transactionalを付ければ効く」という誤解 / 業務エラーを検査例外にするか実行時例外にするかの方針が曖昧

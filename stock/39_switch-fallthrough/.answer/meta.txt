@@ -1,0 +1,3 @@
+index_theme=会員ランク別の送料計算（switchのbreak忘れフォールスルー・default無し）
+perspective=正確性・可読性
+ng=従来型switchでPLATINUMにbreakが無く次のcaseへ突き抜けプラチナが半額になる典型バグ(コンパイルは通るので気付きにくい) / defaultが無く未知ランクで送料が初期値のまま無言のバグ(想定外は例外で気付くべき) / ランクを文字列マジック値で扱い網羅性を保証できない(enum化が望ましい) / 従来型switchはbreak付け忘れが起きやすい構文

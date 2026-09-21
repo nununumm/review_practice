@@ -1,0 +1,3 @@
+index_theme=会員ポイント履歴クラスの設計（不適切な継承 extends ArrayList → 委譲）
+perspective=設計・OOP（継承より委譲）
+ng=ArrayListを継承しis-a関係が不成立(履歴はリストを持つだけ) / clear/remove/set等の全公開メソッドが露出し履歴の不変条件を守れずカプセル化崩壊 / 脆い基底クラス問題(addAllが内部でaddを呼ぶ等の親都合で自分のオーバーライドが壊れ二重計上) / 型がArrayListに縛られ内部データ構造を後から変えられない
