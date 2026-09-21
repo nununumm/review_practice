@@ -1,0 +1,3 @@
+index_theme=注文合計金額の集計（intオーバーフロー）
+perspective=計算の正確性・型安全性
+ng=金額をintで計算し高額・大量の明細で桁あふれ→例外も出さず静かにマイナスへ化ける（核心・気づきにくい）/ averagePerItemで総数量0のときゼロ除算ArithmeticException / 金額をintプリミティブで持つ設計が不適切（BigDecimal/金額値オブジェクトで扱うべき）/ linesのnull・要素nullを考慮せずNPE
