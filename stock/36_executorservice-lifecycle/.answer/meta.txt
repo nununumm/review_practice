@@ -1,0 +1,3 @@
+index_theme=会員一斉メールの並列送信（ExecutorServiceのshutdown漏れ・無制限プール）
+perspective=並行処理・リソース管理
+ng=ExecutorServiceをshutdownせずワーカースレッドがリークしアプリが終了不能/メモリ枯渇 / メソッド毎回newでプールを使い回さず生成破棄コストとスレッド急増 / newCachedThreadPoolは上限なしでスレッド爆発・newFixedThreadPoolは無制限キューでOOM(有界キュー/拒否ポリシー要) / submitのFutureを無視しタスク内例外を握りつぶし失敗が伝わらない
